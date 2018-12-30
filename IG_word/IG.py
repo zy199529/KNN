@@ -75,14 +75,15 @@ def feature_selection_ig():  # 计算每个词的信息熵，按信息熵从大�
     p_c_not_t_mat = (C + 1) / (C + D + class_set_size)
     p_c_t = np.sum(p_c_t_mat * np.log(p_c_t_mat), axis=1)
     p_c_not_t = np.sum(p_c_not_t_mat * np.log(p_c_not_t_mat), axis=1)
-
+    IG_word = []
     term_score_array = p_t * p_c_t + p_not_t * p_c_not_t
     # 按term_score_array升序排列，然后倒序，因为计算公式中忽略掉-号，其实也就是得出降序后的索引位置
     sorted_term_score_index = term_score_array.argsort()[:: -1]
-    term_set_fs = [term_set[index] for index in sorted_term_score_index]
-    return term_set_fs
+    for index in sorted_term_score_index:
+        IG_word.append((term_set[index], term_score_array[index]))
+    return IG_word
 
 
 if __name__ == '__main__':
-    CHI_all_word = feature_selection_ig()  # 返回每个词的信息熵
-    print(CHI_all_word)
+    IG_word = feature_selection_ig()  # 返回每个词的信息熵
+    print(IG_word)
