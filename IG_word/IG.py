@@ -15,7 +15,7 @@ def vocablist():  # 返回计算信息熵的参数：
     # 2）term_set词典
     # 3)term_class_df_mat每个单词的在对应类别中出现的文档数
     # 链接：https://zhuanlan.zhihu.com/p/23199165
-    filePathC = "text"
+    filePathC = "text1000"
     file_list = eachFile(filePathC)
     label, class_df_list, word_list = fenci_all(file_list)
     term_set = createVocabList(word_list)  # 词典

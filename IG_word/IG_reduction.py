@@ -5,7 +5,7 @@ from IG_word.IG import *
 
 def reduction_words():
     IG_word = feature_selection_ig()  # 返回每个词的信息熵
-    floder_path = 'test'  # 分完类的文件夹
+    floder_path = 'test1000'  # 分完类的文件夹
     each_word = []  # 存放降维后的词典
     # 该文件夹下宗共有10个文件夹，分别存储10大类的新闻数据
     floder_list = os.listdir(floder_path)  # 读取每一个类别
@@ -25,10 +25,10 @@ def reduction_words():
                     IG_word_value.append(IG_word[k])#加入找到该单词，则返回词语和其信息熵
         IG_word_value = list(set(IG_word_value))#去重
         IG_word_value.sort(key=operator.itemgetter(1), reverse=True)#排序
-        for x in range(1500):#提取前1500个
+        for x in range(250):#提取前1500个
             each_word.append(IG_word_value[x][0])#提取前1500个单词
     return list(set(each_word)) #去重后返回
 
 
 if __name__ == '__main__':
-    print(reduction_words())#降维后的特征集
+    print(len(reduction_words()))#降维后的特征集

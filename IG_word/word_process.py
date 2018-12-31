@@ -23,7 +23,7 @@ def create_fenci(filename):
                 raw_words = list(jieba.cut(line, cut_all=False))
                 dealed_words = []
                 for word in raw_words:
-                    if word not in stop_word:
+                    if word not in stop_word and word not in ['日期', '版号', '标题', '作者', '正文']:
                         raw_word_list.append(word)
                         dealed_words.append(word)
                 sentence_list.append(dealed_words)
@@ -101,9 +101,10 @@ def fenci_all(file_list):  # 对每个文件分词
 
 
 if __name__ == '__main__':
-    filePathC = "text"  # 从text文件中读取文件
-    file_list = eachFile(filePathC)  # 每个文件名数组
+    # filePathC = "text1000"  # 从text文件中读取文件
+    file_list = "text1000"  # 每个文件名数组
     print("文件名", file_list)
     # word_list存放词典
     label, class_df_list, word_list = fenci_all(file_list)  # 分词后1）获得标签2）每个词对应的类别的文本数3）每个文本词典
+
     print(class_df_list)
