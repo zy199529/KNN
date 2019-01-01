@@ -28,7 +28,7 @@ def getNeighbors(trainingSet, testInstance, k, label):
 def getResponse(neighbors):
     classVotes = {}
     for x in range(len(neighbors)):
-        response = neighbors[x][-1]
+        response = neighbors[x]
         if response in classVotes:
             classVotes[response] += 1
         else:
@@ -42,7 +42,7 @@ def getAccurcy(test_label, predictions):
     for x in range(len(test_label)):
         if test_label[x] == predictions[x]:
             correct += 1
-    return (correct / float(len(test_label))) * 100.0
+    return (correct / len(test_label)) * 100.0
 
 
 def testbagOfWord2Vec(vocabList, inputSet):  # 词袋模型，统计概率的
@@ -56,18 +56,14 @@ def testbagOfWord2Vec(vocabList, inputSet):  # 词袋模型，统计概率的
 if __name__ == '__main__':
     # 测试文本，使用KNN分类
     vocabList = reduction_words()  # 降维后的词典
-    # testname = '交通_41.TXT'
-    # testList = create_fenci(testname)
-    # testVec = testbagOfWord2Vec(vocabList, testList)
     train_vec_List, idf_array, label = tf_idf()
     test_vec_List, test_label = test_tf_idf()
-    # test_vec = np.array(get_l_tf(np.array(testVec)) * idf_array)
     k = 25
     prediction = []
     for x in range(len(test_vec_List)):
         neighbors = getNeighbors(train_vec_List, test_vec_List[x], k, label)
         result = getResponse(neighbors)
         prediction.append(result)
-        print("prediction=" + repr(result) + "actual" + repr(test_label[x]))
-    accuracy = getAccurcy(test_vec_List, prediction)
-    print(neighbors)
+        print("prediction=" + repr(result) + "  actual=" + repr(test_label[x]))
+    accuracy = getAccurcy(test_label, prediction)
+    print(accuracy)

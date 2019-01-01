@@ -25,7 +25,7 @@ def get_t_idf(df):  # 根据df来计算idf
     N = 100
     idf_array = []
     for tf in df:
-        idf_array.append(math.log10(N / tf))  # 公式计算idf
+        idf_array.append(math.log10((N + 1) / (tf + 1)) + 1)  # 公式计算idf
     return idf_array
 
 
@@ -50,7 +50,7 @@ def tf_idf():
     df = np.sum(Vec, axis=0)  # 计算tf_idf中的df词语的频率
     idf_array = get_t_idf(df)  # 计算idf
     idf_array = np.array(idf_array)
-    # print("idf的值", idf_array)
+    print("idf的值", idf_array)
     train_vec_List = []
     for sentence in range(np.array(returnVec).shape[0]):
         train_vec_List.append(np.array(get_l_tf(np.array(returnVec)[sentence, :])) * idf_array)  # idf*tf
@@ -60,19 +60,18 @@ def tf_idf():
 
 def test_tf_idf():
     vocabList = reduction_words()  # 降维后的词典
-    file_list = "test_all"  # 每个文件名数组
-    file_list = eachFile(file_list)
-    test_word_list=[]
-    for article in file_list:
-        test_word_list.append(create_fenci(article))
+    filePathC = "test_all"  # 每个文件名数组
+    file_list = eachFile(filePathC)
+    test_label, class_df_list, test_word_list = fenci_all(file_list)
     returnVec, Vec = bagOfWord2Vec(vocabList, test_word_list)  # returnVec为词典中词语在每个文本中出现的次数，Vec为只要出现过这个词就为1
     df = np.sum(Vec, axis=0)  # 计算tf_idf中的df词语的频率
     idf_array = get_t_idf(df)  # 计算idf
     idf_array = np.array(idf_array)
     # print("idf的值", idf_array)
-    train_vec_List = []
+    test_vec_List = []
     for sentence in range(np.array(returnVec).shape[0]):
-        train_vec_List.append(np.array(get_l_tf(np.array(returnVec)[sentence, :])) * idf_array)  # idf*tf
+        test_vec_List.append(np.array(get_l_tf(np.array(returnVec)[sentence, :])) * idf_array)  # idf*tf
+    return test_vec_List, test_label
 
 
 if __name__ == '__main__':
