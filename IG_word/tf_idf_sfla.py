@@ -1,7 +1,5 @@
 # -*- coding:utf-8 -*-
 from IG_word.IG_reduction import *
-from IG_word.word_process import *
-from IG_word.SFLA import *
 import math
 
 
@@ -40,18 +38,16 @@ def get_l_tf(tf):
     return tf_array
 
 
-def tf_idf():
+def tf_idf_sfla(vocabList):
     # 下面计算特征集的TF-IDF的值
     # 使用词袋模型统计词语频次
-    vocabList = reduction_words()  # 降维后的词典
-    filePathC = "text1000"  # 从text文件中读取文件
+    filePathC = "text100"  # 从text文件中读取文件
     file_list = eachFile(filePathC)  # 每个文件名数组
     label, class_df_list, word_list = fenci_all(file_list)
     returnVec, Vec = bagOfWord2Vec(vocabList, word_list)  # returnVec为词典中词语在每个文本中出现的次数，Vec为只要出现过这个词就为1
     df = np.sum(Vec, axis=0)  # 计算tf_idf中的df词语的频率
     idf_array = get_t_idf(df)  # 计算idf
     idf_array = np.array(idf_array)
-    print("idf的值", idf_array)
     train_vec_List = []
     for sentence in range(np.array(returnVec).shape[0]):
         train_vec_List.append(np.array(get_l_tf(np.array(returnVec)[sentence, :])) * idf_array)  # idf*tf
@@ -59,8 +55,7 @@ def tf_idf():
     return train_vec_List, idf_array, label
 
 
-def test_tf_idf():
-    vocabList = reduction_words()  # 降维后的词典
+def test_tf_idf_sfla(vocabList):
     filePathC = "test_all"  # 每个文件名数组
     file_list = eachFile(filePathC)
     test_label, class_df_list, test_word_list = fenci_all(file_list)
@@ -76,4 +71,4 @@ def test_tf_idf():
 
 
 if __name__ == '__main__':
-    print(test_tf_idf())  # 经过tf_idf后的向量
+    print(test_tf_idf_sfla())  # 经过tf_idf后的向量

@@ -1,6 +1,4 @@
 # -*- coding:utf-8 -*-
-from IG_word.IG_reduction import *
-from IG_word.word_process import *
 from IG_word.TF_IDF import *
 
 
@@ -52,10 +50,7 @@ def testbagOfWord2Vec(vocabList, inputSet):  # 词袋模型，统计概率的
             tmp[vocabList.index(word)] += 1  # 当前文档有这个词条，则根据词典位置获取其位置并赋值为1
     return tmp
 
-
-if __name__ == '__main__':
-    # 测试文本，使用KNN分类
-    vocabList = reduction_words()  # 降维后的词典
+def KNN_classify():
     train_vec_List, idf_array, label = tf_idf()
     test_vec_List, test_label = test_tf_idf()
     k = 25
@@ -66,4 +61,8 @@ if __name__ == '__main__':
         prediction.append(result)
         print("prediction=" + repr(result) + "  actual=" + repr(test_label[x]))
     accuracy = getAccurcy(test_label, prediction)
-    print(accuracy)
+    return accuracy
+
+if __name__ == '__main__':
+    # 测试文本，使用KNN分类
+    print(KNN_classify())
