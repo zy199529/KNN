@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c946822-3d93-4b67-8615-e751a7482b5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IG_word/SFLA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IG_word/tf_idf_sfla.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/IG_reduction.py" beforeDir="false" afterPath="$PROJECT_DIR$/IG_word/IG_reduction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/KNN_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/IG_word/KNN_classify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/TF_IDF.py" beforeDir="false" afterPath="$PROJECT_DIR$/IG_word/TF_IDF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/交通_41.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/体育_101.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/军事_81.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/医药_71.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/政治_91.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/教育_31.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/环境_537.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/电脑_11.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/经济_61.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IG_word/艺术_21.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IG_word/SFLA.py" beforeDir="false" afterPath="$PROJECT_DIR$/IG_word/SFLA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/IG_KNN$IG__1_.coverage" NAME="IG (1) Coverage Results" MODIFIED="1546414938161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
-    <SUITE FILE_PATH="coverage/IG_KNN$SFLA.coverage" NAME="SFLA Coverage Results" MODIFIED="1546437180237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
+    <SUITE FILE_PATH="coverage/IG_KNN$SFLA.coverage" NAME="SFLA Coverage Results" MODIFIED="1546512045004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
     <SUITE FILE_PATH="coverage/IG_KNN$TF_IDF.coverage" NAME="TF_IDF Coverage Results" MODIFIED="1546346286855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
     <SUITE FILE_PATH="coverage/IG_KNN$word_process__1_.coverage" NAME="word_process (1) Coverage Results" MODIFIED="1546148898051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
     <SUITE FILE_PATH="coverage/IG_KNN$IG.coverage" NAME="IG Coverage Results" MODIFIED="1546140429705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG" />
@@ -36,12 +22,12 @@
     <SUITE FILE_PATH="coverage/IG_KNN$KNN_classify.coverage" NAME="KNN_classify Coverage Results" MODIFIED="1546427418097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/IG_word" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IG_word/SFLA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="30">
+              <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
               <folding>
                 <element signature="e#23#56#0" expanded="true" />
               </folding>
@@ -65,8 +51,9 @@
       <find>]</find>
       <find>np.array(get</find>
       <find>lab</find>
-      <find>[</find>
       <find>print</find>
+      <find>[</find>
+      <find>M</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,8 +80,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="622" />
-    <option name="y" value="86" />
+    <option name="x" value="621" />
+    <option name="y" value="85" />
     <option name="width" value="1250" />
     <option name="height" value="995" />
   </component>
@@ -104,6 +91,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,7 +108,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,12 +276,13 @@
       <workItem from="1546316330524" duration="3035000" />
       <workItem from="1546329166146" duration="3764000" />
       <workItem from="1546342376138" duration="8307000" />
-      <workItem from="1546412209889" duration="17140000" />
+      <workItem from="1546412209889" duration="17739000" />
+      <workItem from="1546495266397" duration="15158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73098000" />
+    <option name="totallyTimeSpent" value="88855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -309,12 +297,12 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49865952" weight="0.31449276" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.46376812" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.657971" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -343,9 +331,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/IG_word/test.py" />
-    <entry file="file://$PROJECT_DIR$/IG_word/交通_41.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IG_word/交通_41.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/test100/交通/交通_42.TXT">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -353,13 +339,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IG_word/环境_537.TXT">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IG_word/环境_537.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/电脑_12.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/stop_words.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -371,18 +351,10 @@
     <entry file="file://$PROJECT_DIR$/IG_word/text1000/交通_41.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/电脑_111.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/test1000/交通/交通_41.TXT" />
-    <entry file="file://$PROJECT_DIR$/IG_word/政治_91.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IG_word/经济_61.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IG_word/教育_31.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IG_word/电脑_11.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IG_word/政治_91.TXT" />
+    <entry file="file://$PROJECT_DIR$/IG_word/经济_61.TXT" />
+    <entry file="file://$PROJECT_DIR$/IG_word/教育_31.TXT" />
+    <entry file="file://$PROJECT_DIR$/IG_word/电脑_11.TXT" />
     <entry file="file://$PROJECT_DIR$/IG_word/test_all/交通_41.TXT">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -452,9 +424,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IG_word/KNN_classify_sfla.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/IG_word/KNN_classify_sfla.py" />
     <entry file="file://$PROJECT_DIR$/IG_word/TF_IDF.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-441">
@@ -477,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IG_word/SFLA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="30">
+          <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
           <folding>
             <element signature="e#23#56#0" expanded="true" />
           </folding>
